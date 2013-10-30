@@ -50,3 +50,7 @@ grunt.initConfig({
 ## Release History
 
 * 0.1.0 - First release
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/logankoester/grunt-hipchat-notifier/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
