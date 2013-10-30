@@ -21,23 +21,28 @@
       "url": "https://github.com/logankoester/grunt-hipchat-notifier/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "Gruntfile.js",
+  "main": "tasks/hipchat_notifier.js",
   "engines": {
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "build": "grunt"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-clean": "~0.4.0",
-    "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+    "grunt-bump": "0.0.11",
+    "grunt-contrib-coffee": "~0.7.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
   },
   "keywords": [
-    "gruntplugin"
-  ]
+    "gruntplugin",
+    "hipchat",
+    "notifier"
+  ],
+  "dependencies": {
+    "hipchat-client": "0.0.9"
+  }
 }

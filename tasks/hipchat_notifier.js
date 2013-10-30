@@ -1,50 +1,32 @@
-/*
- * grunt-hipchat-notifier
- * https://github.com/logankoester/grunt-hipchat-notifier
- *
- * Copyright (c) 2013 Logan Koester
- * Licensed under the MIT license.
- */
-
-'use strict';
-
-module.exports = function(grunt) {
-
-  // Please see the Grunt documentation for more information regarding task
-  // creation: http://gruntjs.com/creating-tasks
-
-  grunt.registerMultiTask('hipchat_notifier', 'Your task description goes here.', function() {
-    // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({
-      punctuation: '.',
-      separator: ', '
+(function() {
+  module.exports = function(grunt) {
+    var HipchatClient;
+    HipchatClient = require('hipchat-client');
+    return grunt.registerMultiTask('hipchat_notifier', 'Send a message to a Hipchat room', function() {
+      var done, hipchat, options, params;
+      grunt.config.requires('hipchat_notifier.options.authToken');
+      grunt.config.requires('hipchat_notifier.options.roomId');
+      options = this.options({
+        from: 'GruntJS',
+        color: 'yellow',
+        notify: 0
+      });
+      grunt.verbose.writeflags(options, 'Options');
+      grunt.verbose.writeln("Token: " + options.authToken);
+      done = this.async();
+      hipchat = new HipchatClient(options.authToken);
+      grunt.verbose.writeln("Room: " + options.room);
+      grunt.log.writeln('Sending Hipchat notification...');
+      params = {
+        from: options.from,
+        color: options.color,
+        notify: options.notify
+      };
+      return hipchat.sendRoomMessage(options.message, options.roomId, params, function(success) {
+        grunt.log.writeln('Notification sent!');
+        return done();
+      });
     });
+  };
 
-    // Iterate over all specified file groups.
-    this.files.forEach(function(f) {
-      // Concat specified files.
-      var src = f.src.filter(function(filepath) {
-        // Warn on and remove invalid source files (if nonull was set).
-        if (!grunt.file.exists(filepath)) {
-          grunt.log.warn('Source file "' + filepath + '" not found.');
-          return false;
-        } else {
-          return true;
-        }
-      }).map(function(filepath) {
-        // Read file source.
-        return grunt.file.read(filepath);
-      }).join(grunt.util.normalizelf(options.separator));
-
-      // Handle options.
-      src += options.punctuation;
-
-      // Write the destination file.
-      grunt.file.write(f.dest, src);
-
-      // Print a success message.
-      grunt.log.writeln('File "' + f.dest + '" created.');
-    });
-  });
-
-};
+}).call(this);
