@@ -3,7 +3,7 @@
     var HipchatClient;
     HipchatClient = require('hipchat-client');
     return grunt.registerMultiTask('hipchat_notifier', 'Send a message to a Hipchat room', function() {
-      var done, hipchat, options, params;
+      var done, hipchat, options, params, _ref, _ref1, _ref2;
       grunt.config.requires('hipchat_notifier.options.authToken');
       grunt.config.requires('hipchat_notifier.options.roomId');
       options = this.options({
@@ -18,11 +18,11 @@
       grunt.verbose.writeln("Room: " + options.room);
       grunt.log.writeln('Sending Hipchat notification...');
       params = {
-        from: options.from,
-        color: options.color,
+        from: (_ref = typeof options.from === "function" ? options.from() : void 0) != null ? _ref : options.from,
+        color: (_ref1 = typeof options.color === "function" ? options.color() : void 0) != null ? _ref1 : options.color,
         notify: options.notify
       };
-      return hipchat.sendRoomMessage(options.message, options.roomId, params, function(success) {
+      return hipchat.sendRoomMessage((_ref2 = typeof options.message === "function" ? options.message() : void 0) != null ? _ref2 : options.message, options.roomId, params, function(success) {
         grunt.log.writeln('Notification sent!');
         return done();
       });

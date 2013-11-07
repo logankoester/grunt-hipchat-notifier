@@ -30,7 +30,7 @@ grunt.initConfig({
 
     options: {
       authToken: "", // Create an authToken at https://hipchat.com/admin/api
-      roomId: "", // Numeric Hipchat roomId
+      roomId: "" // Numeric Hipchat roomId
     },
 
     // Now create as many messages as you like!
@@ -38,10 +38,28 @@ grunt.initConfig({
     hello_grunt: {
       options: {
         message: "Hello!", // A message to send
-        from: "Grunt" // Name for the sender
+        from: "Grunt", // Name for the sender
         color: "purple" // Color of the message
       }
     },
+
+    // Send dynamic message based off anything Node/Grunt/Javascript can do!
+    
+    dynamic_hello_grunt: {
+      options: {
+        message: function() { // Functions must return a string
+          var pkg = grunt.config.data.pkg;
+          return 'Running grunt on ' + pkg.name + ' on version ' + pkg.name;
+        },
+        from: function() {  // Return the run-time user, or something more creative.
+          return someUsernameGenerator() || process.env['USER'];
+        },
+        // Change color dynamically based on some global state, function response, etc
+        color: function() {
+          return (grunt.config.data.someBoolean && allIsWell()) ? 'green' : 'red';
+        }
+      }
+    }
 
   },
 })
@@ -49,6 +67,7 @@ grunt.initConfig({
 
 ## Release History
 
+* 0.1.1 - Added support for dynamic messaging
 * 0.1.0 - First release
 
 
