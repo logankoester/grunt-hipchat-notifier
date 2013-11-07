@@ -28,10 +28,10 @@ module.exports = (grunt) ->
     grunt.log.writeln 'Sending Hipchat notification...'
 
     params =
-      from: options.from
-      color: options.color
+      from: options.from?() ? options.from
+      color: options.color?() ? options.color
       notify: options.notify
 
-    hipchat.sendRoomMessage options.message, options.roomId, params, (success) ->
+    hipchat.sendRoomMessage options.message?() ? options.message, options.roomId, params, (success) ->
       grunt.log.writeln 'Notification sent!'
       done()
