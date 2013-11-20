@@ -1,5 +1,8 @@
 # grunt-hipchat-notifier
 
+[![Dependency Status](https://david-dm.org/logankoester/grunt-hipchat-notifier.png)](https://david-dm.org/logankoester/grunt-hipchat-notifier)
+[![devDependency Status](https://david-dm.org/logankoester/grunt-hipchat-notifier/dev-status.png)](https://david-dm.org/logankoester/grunt-hipchat-notifier#info=devDependencies)
+
 > Send grunt messages to a Hipchat channel
 
 ## Getting Started
