@@ -3,6 +3,8 @@
 [![Dependency Status](https://david-dm.org/logankoester/grunt-hipchat-notifier.png)](https://david-dm.org/logankoester/grunt-hipchat-notifier)
 [![devDependency Status](https://david-dm.org/logankoester/grunt-hipchat-notifier/dev-status.png)](https://david-dm.org/logankoester/grunt-hipchat-notifier#info=devDependencies)
 
+[![NPM](https://nodei.co/npm/grunt-hipchat-notifier.png?downloads=true)](https://nodei.co/npm/grunt-hipchat-notifier/)
+
 > Send grunt messages to a Hipchat channel
 
 ## Getting Started
