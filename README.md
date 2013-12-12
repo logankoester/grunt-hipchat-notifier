@@ -2,6 +2,7 @@
 
 [![Dependency Status](https://david-dm.org/logankoester/grunt-hipchat-notifier.png)](https://david-dm.org/logankoester/grunt-hipchat-notifier)
 [![devDependency Status](https://david-dm.org/logankoester/grunt-hipchat-notifier/dev-status.png)](https://david-dm.org/logankoester/grunt-hipchat-notifier#info=devDependencies)
+[![Gittip](http://img.shields.io/gittip/logankoester.png)](https://www.gittip.com/logankoester/)
 
 [![NPM](https://nodei.co/npm/grunt-hipchat-notifier.png?downloads=true)](https://nodei.co/npm/grunt-hipchat-notifier/)
 
