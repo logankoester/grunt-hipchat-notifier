@@ -1,12 +1,12 @@
-# grunt-hipchat-notifier
+# Grunt: Hipchat Notifier
+> Send grunt messages to a Hipchat channel
 
+[![status](https://sourcegraph.com/api/repos/github.com/logankoester/grunt-hipchat-notifier/badges/status.png)](https://sourcegraph.com/github.com/logankoester/grunt-hipchat-notifier)
 [![Dependency Status](https://david-dm.org/logankoester/grunt-hipchat-notifier.png)](https://david-dm.org/logankoester/grunt-hipchat-notifier)
 [![devDependency Status](https://david-dm.org/logankoester/grunt-hipchat-notifier/dev-status.png)](https://david-dm.org/logankoester/grunt-hipchat-notifier#info=devDependencies)
 [![Gittip](http://img.shields.io/gittip/logankoester.png)](https://www.gittip.com/logankoester/)
 
 [![NPM](https://nodei.co/npm/grunt-hipchat-notifier.png?downloads=true)](https://nodei.co/npm/grunt-hipchat-notifier/)
-
-> Send grunt messages to a Hipchat channel
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -79,3 +79,10 @@ grunt.initConfig({
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/logankoester/grunt-hipchat-notifier/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
+[![xrefs](https://sourcegraph.com/api/repos/github.com/logankoester/grunt-hipchat-notifier/badges/xrefs.png)](https://sourcegraph.com/github.com/logankoester/grunt-hipchat-notifier)
+[![funcs](https://sourcegraph.com/api/repos/github.com/logankoester/grunt-hipchat-notifier/badges/funcs.png)](https://sourcegraph.com/github.com/logankoester/grunt-hipchat-notifier)
+[![top func](https://sourcegraph.com/api/repos/github.com/logankoester/grunt-hipchat-notifier/badges/top-func.png)](https://sourcegraph.com/github.com/logankoester/grunt-hipchat-notifier)
+[![library users](https://sourcegraph.com/api/repos/github.com/logankoester/grunt-hipchat-notifier/badges/library-users.png)](https://sourcegraph.com/github.com/logankoester/grunt-hipchat-notifier)
+[![authors](https://sourcegraph.com/api/repos/github.com/logankoester/grunt-hipchat-notifier/badges/authors.png)](https://sourcegraph.com/github.com/logankoester/grunt-hipchat-notifier)
+[![Total views](https://sourcegraph.com/api/repos/github.com/logankoester/grunt-hipchat-notifier/counters/views.png)](https://sourcegraph.com/github.com/logankoester/grunt-hipchat-notifier)
+[![Views in the last 24 hours](https://sourcegraph.com/api/repos/github.com/logankoester/grunt-hipchat-notifier/counters/views-24h.png)](https://sourcegraph.com/github.com/logankoester/grunt-hipchat-notifier)
