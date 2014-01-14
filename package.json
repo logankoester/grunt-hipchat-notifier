@@ -31,8 +31,8 @@
   "devDependencies": {
     "grunt-contrib-clean": "~0.5.0",
     "grunt": "~0.4.1",
-    "grunt-bump": "0.0.11",
-    "grunt-contrib-coffee": "~0.7.0"
+    "grunt-bump": "0.0.13",
+    "grunt-contrib-coffee": "~0.8.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
