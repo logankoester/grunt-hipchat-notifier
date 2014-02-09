@@ -32,7 +32,7 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt": "~0.4.1",
     "grunt-bump": "0.0.13",
-    "grunt-contrib-coffee": "~0.8.0"
+    "grunt-contrib-coffee": "~0.10.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
