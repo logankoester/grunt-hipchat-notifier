@@ -46,6 +46,7 @@ grunt.initConfig({
         message: "Hello!", // A message to send
         from: "Grunt", // Name for the sender
         color: "purple" // Color of the message
+        message_format: "text" // Can either be 'text' or 'html' format
       }
     },
 
@@ -72,7 +73,7 @@ grunt.initConfig({
 ```
 
 ## Release History
-
+* 0.1.2 - Added support for Hipchat message type to allow for emoticons and @mentions
 * 0.1.1 - Added support for dynamic messaging
 * 0.1.0 - First release
 
