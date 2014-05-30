@@ -2,7 +2,7 @@
 # * grunt-hipchat-notifier
 # * https://github.com/logankoester/grunt-hipchat-notifier
 # *
-# * Copyright (c) 2013 Logan Koester
+# * Copyright (c) 2013-2014 Logan Koester
 # * Licensed under the MIT license.
 #
 module.exports = (grunt) ->
