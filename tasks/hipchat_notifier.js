@@ -9,7 +9,8 @@
       options = this.options({
         from: 'GruntJS',
         color: 'yellow',
-        notify: 0
+        notify: 0,
+        message_format: 'html'
       });
       grunt.verbose.writeflags(options, 'Options');
       grunt.verbose.writeln("Token: " + options.authToken);
@@ -20,7 +21,8 @@
       params = {
         from: (_ref = typeof options.from === "function" ? options.from() : void 0) != null ? _ref : options.from,
         color: (_ref1 = typeof options.color === "function" ? options.color() : void 0) != null ? _ref1 : options.color,
-        notify: options.notify
+        notify: options.notify,
+        message_format: options.message_format
       };
       return hipchat.sendRoomMessage((_ref2 = typeof options.message === "function" ? options.message() : void 0) != null ? _ref2 : options.message, options.roomId, params, function(success) {
         grunt.log.writeln('Notification sent!');
