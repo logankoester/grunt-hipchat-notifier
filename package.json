@@ -1,7 +1,7 @@
 {
   "name": "grunt-hipchat-notifier",
   "description": "Send grunt messages to a Hipchat channel",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/logankoester/grunt-hipchat-notifier",
   "author": {
     "name": "Logan Koester",
