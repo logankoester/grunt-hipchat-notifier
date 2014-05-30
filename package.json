@@ -29,9 +29,9 @@
     "build": "grunt"
   },
   "devDependencies": {
-    "grunt-contrib-clean": "~0.5.0",
     "grunt": "~0.4.1",
-    "grunt-bump": "0.0.13",
+    "grunt-bump": "0.0.14",
+    "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-coffee": "~0.10.0"
   },
   "peerDependencies": {
@@ -43,6 +43,6 @@
     "notifier"
   ],
   "dependencies": {
-    "hipchat-client": "0.0.9"
+    "hipchat-client": "^0.1.1"
   }
 }
