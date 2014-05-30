@@ -16,6 +16,7 @@ module.exports = (grunt) ->
       from: 'GruntJS'
       color: 'yellow'
       notify: 0
+      message_format: 'html'
     )
 
     grunt.verbose.writeflags options, 'Options'
@@ -31,6 +32,7 @@ module.exports = (grunt) ->
       from: options.from?() ? options.from
       color: options.color?() ? options.color
       notify: options.notify
+      message_format: options.message_format
 
     hipchat.sendRoomMessage options.message?() ? options.message, options.roomId, params, (success) ->
       grunt.log.writeln 'Notification sent!'
