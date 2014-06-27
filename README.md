@@ -45,7 +45,7 @@ grunt.initConfig({
       options: {
         message: "Hello!", // A message to send
         from: "Grunt", // Name for the sender
-        color: "purple" // Color of the message
+        color: "purple", // Color of the message
         message_format: "html" // Can either be 'text' or 'html' format
       }
     },
