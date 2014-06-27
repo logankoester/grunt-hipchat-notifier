@@ -43,6 +43,6 @@
     "notifier"
   ],
   "dependencies": {
-    "hipchat-client": "^0.1.1"
+    "hipchat-client": "^1.0.2"
   }
 }
