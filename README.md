@@ -73,6 +73,7 @@ grunt.initConfig({
 ```
 
 ## Release History
+* 0.2.2 - Updated hipchat-client, fixes syntax error in example
 * 0.2.1 - Updated hipchat-client - roomId can now be either numeric or room name.
 * 0.2.0 - Added support for Hipchat message_format to allow for emoticons and @mentions
 * 0.1.1 - Added support for dynamic messaging
