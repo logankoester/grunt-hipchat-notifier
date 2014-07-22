@@ -25,15 +25,18 @@ module.exports = (grunt) ->
     done = @async()
     hipchat = new HipchatClient(options.authToken)
 
-    grunt.verbose.writeln "Room: #{options.room}"
+    grunt.verbose.writeln "Room: #{options.roomId}"
     grunt.log.writeln 'Sending Hipchat notification...'
 
     params =
       from: options.from?() ? options.from
       color: options.color?() ? options.color
+      message: options.message?() ? options.message
       notify: options.notify
       message_format: options.message_format
+      room_id: options.roomId
 
-    hipchat.sendRoomMessage options.message?() ? options.message, options.roomId, params, (success) ->
-      grunt.log.writeln 'Notification sent!'
-      done()
+    hipchat.api.rooms.message params, (err, res) ->
+        throw err if (err)
+        grunt.log.writeln('Notification sent!');
+        return done();

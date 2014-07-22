@@ -16,15 +16,20 @@
       grunt.verbose.writeln("Token: " + options.authToken);
       done = this.async();
       hipchat = new HipchatClient(options.authToken);
-      grunt.verbose.writeln("Room: " + options.room);
+      grunt.verbose.writeln("Room: " + options.roomId);
       grunt.log.writeln('Sending Hipchat notification...');
       params = {
         from: (_ref = typeof options.from === "function" ? options.from() : void 0) != null ? _ref : options.from,
         color: (_ref1 = typeof options.color === "function" ? options.color() : void 0) != null ? _ref1 : options.color,
+        message: (_ref2 = typeof options.message === "function" ? options.message() : void 0) != null ? _ref2 : options.message,
         notify: options.notify,
-        message_format: options.message_format
+        message_format: options.message_format,
+        room_id: options.roomId
       };
-      return hipchat.sendRoomMessage((_ref2 = typeof options.message === "function" ? options.message() : void 0) != null ? _ref2 : options.message, options.roomId, params, function(success) {
+      return hipchat.api.rooms.message(params, function(err, res) {
+        if (err) {
+          throw err;
+        }
         grunt.log.writeln('Notification sent!');
         return done();
       });
