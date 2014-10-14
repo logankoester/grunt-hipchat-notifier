@@ -1,6 +1,8 @@
 # Grunt: Hipchat Notifier
 > Send grunt messages to a Hipchat channel
 
+[![readme.io](https://www.filepicker.io/api/file/cELagUuS7qFS59eScMax)](http://grunt-hipchat-notifier.readme.io/)
+
 [![status](https://sourcegraph.com/api/repos/github.com/logankoester/grunt-hipchat-notifier/badges/status.png)](https://sourcegraph.com/github.com/logankoester/grunt-hipchat-notifier)
 [![Dependency Status](https://david-dm.org/logankoester/grunt-hipchat-notifier.png)](https://david-dm.org/logankoester/grunt-hipchat-notifier)
 [![devDependency Status](https://david-dm.org/logankoester/grunt-hipchat-notifier/dev-status.png)](https://david-dm.org/logankoester/grunt-hipchat-notifier#info=devDependencies)
